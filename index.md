@@ -1,58 +1,8 @@
 <html>
-<head>
-    <title>Love Symbol</title>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-        }
-        
-        #loveSymbol {
-            font-size: 50px;
-            cursor: pointer;
-            animation: loveAnimation 1s infinite alternate;
-        }
-        
-        @keyframes loveAnimation {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.2);
-            }
-        }
-    </style>
-</head>
 <body>
-    <div id="loveSymbol" onclick="createLoveSymbol()">Kushi</div>
-
-    <script>
-        function createLoveSymbol() {
-            const loveSymbol = document.createElement('div');
-            loveSymbol.innerHTML = '&#10084; Kushi'; // HTML entity for heart symbol
-
-            loveSymbol.style.position = 'absolute';
-            loveSymbol.style.top = Math.random() * (window.innerHeight - 100) + 'px';
-            loveSymbol.style.left = Math.random() * (window.innerWidth - 100) + 'px';
-            loveSymbol.style.color = getRandomColor();
-
-            document.body.appendChild(loveSymbol);
-        }
-
-        function getRandomColor() {
-            const letters = '0123456789ABCDEF';
-            let color = '#';
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-    </script>
+    <h1>
+        Ika chalu chadhuvuko, eeeeeeeee
+    </h1>
 </body>
 </html>
 <br>
