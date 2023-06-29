@@ -1,7 +1,7 @@
 <html>
 <body>
     <h1>
-        Ika chalu chadhuvuko, eeeeeeeee
+        Example
     </h1>
 </body>
 </html>
