@@ -1,37 +1,42 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love Symbol</title>
+    <style>
+        #loveSymbol {
+            font-size: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="loveSymbol" onclick="createLoveSymbol()">Kushi</div>
 
-You can use the [editor on GitHub](https://github.com/PadalaSandeep/padalasandeep.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+    <script>
+        function createLoveSymbol() {
+            const loveSymbol = document.createElement('div');
+            loveSymbol.innerHTML = '&#10084; Kushi'; // HTML entity for heart symbol
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+            loveSymbol.style.position = 'absolute';
+            loveSymbol.style.top = Math.random() * (window.innerHeight - 100) + 'px';
+            loveSymbol.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+            loveSymbol.style.color = getRandomColor();
 
-### Markdown
+            document.body.appendChild(loveSymbol);
+        }
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/PadalaSandeep/padalasandeep.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>
