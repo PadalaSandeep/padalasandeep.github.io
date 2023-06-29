@@ -2,13 +2,29 @@
 <head>
     <title>Love Symbol</title>
     <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        
         #loveSymbol {
             font-size: 50px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             cursor: pointer;
+            animation: loveAnimation 1s infinite alternate;
+        }
+        
+        @keyframes loveAnimation {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
+            }
         }
     </style>
 </head>
