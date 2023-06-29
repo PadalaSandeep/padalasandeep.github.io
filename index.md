@@ -48,3 +48,9 @@
 <br>
 <br>
 <br>
+<style>
+    /* Hide GitHub Pages header and footer */
+    .header, .footer {
+        display: none !important;
+    }
+</style>
