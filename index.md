@@ -30,22 +30,17 @@
         }
 
         #hearts-and-messages {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            position: relative;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
             pointer-events: none;
-            z-index: 0;
         }
 
         .heart {
             font-size: 48px;
-            margin-top: 20px;
+            margin: 20px;
             animation: beat 1s infinite;
             pointer-events: none;
             transition: color 1s ease-in-out;
@@ -54,8 +49,9 @@
         .message {
             font-size: 24px;
             color: green;
-            margin-top: 20px;
+            margin: 20px;
             pointer-events: none;
+            transition: color 1s ease-in-out;
         }
 
         @keyframes beat {
@@ -97,16 +93,20 @@
             const heartsAndMessages = document.getElementById("hearts-and-messages");
             
             const randomMessage = getRandomElement(messages);
-            const randomColor = getRandomColor();
+            const randomHeartColor = getRandomColor();
+            const randomMessageColor = getRandomColor();
 
             const message = document.createElement("div");
             message.className = "message";
             message.textContent = randomMessage;
+            message.style.color = randomMessageColor;
 
             const heart = document.createElement("div");
             heart.className = "heart";
             heart.textContent = "❤️";
-            heart.style.color = randomColor;
+            heart.style.color = randomHeartColor;
+
+            heartsAndMessages.innerHTML = ""; // Clear previous hearts and messages
 
             heartsAndMessages.appendChild(message);
             heartsAndMessages.appendChild(heart);
