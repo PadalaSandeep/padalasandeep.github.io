@@ -73,7 +73,23 @@
             "Take care My SweetHeart",
             "You have a Million Dollar Smile, Smile Da eeeeeee",
             "One in a Billion Soul",
-            "Sending all the love for speedy recovery"
+            "Sending all the love for speedy recovery",
+            "You light up my world",
+            "You're my everything",
+            "You are the reason for my happiness",
+            "You make every day better",
+            "I adore you more each day",
+            "My love for you is endless",
+            "You are the queen of my heart",
+            "You complete me",
+            "You are my sunshine",
+            "You are my one and only",
+            "You are my love and my life",
+            "You make life beautiful",
+            "You are the love of my life",
+            "You are the most beautiful person I know",
+            "You are my soulmate",
+            "You are my forever love"
         ];
 
         function getRandomElement(arr) {
@@ -90,11 +106,13 @@
         }
 
         function showHeart() {
+            const kushiName = document.getElementById("kushi-name");
             const heartsAndMessages = document.getElementById("hearts-and-messages");
             
             const randomMessage = getRandomElement(messages);
             const randomHeartColor = getRandomColor();
             const randomMessageColor = getRandomColor();
+            const randomNameColor = getRandomColor();
 
             const message = document.createElement("div");
             message.className = "message";
@@ -105,6 +123,8 @@
             heart.className = "heart";
             heart.textContent = "❤️";
             heart.style.color = randomHeartColor;
+
+            kushiName.style.color = randomNameColor;
 
             heartsAndMessages.innerHTML = ""; // Clear previous hearts and messages
 
