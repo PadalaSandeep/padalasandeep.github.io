@@ -44,7 +44,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center">Diet Plan</h1>
+        <h1 class="text-center">Kushi's Diet Plan</h1>
         <table class="table table-bordered">
             <thead>
                 <tr>
