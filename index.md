@@ -2,68 +2,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kushi SPA</title>
+    <title>Kushi's Diet Plan</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS for table -->
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background-color: #f5f5f5; /* Light background color */
+        }
+
+        .table-container {
+            overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+            max-width: 100%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 1200px; /* Adjust as needed for larger screens */
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
             text-align: center;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-        
-        #kushi-name {
-            font-size: 36px;
-            cursor: pointer;
-            transition: color 0.3s;
-            z-index: 1;
         }
 
-        #kushi-name:hover {
-            color: red;
-        }
-
-        #hearts-and-messages {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            pointer-events: none;
-        }
-
-        .heart {
-            font-size: 48px;
-            margin: 20px;
-            animation: beat 1s infinite;
-            pointer-events: none;
-            transition: color 1s ease-in-out;
-        }
-
-        .message {
-            font-size: 24px;
-            color: green;
-            margin: 20px;
-            pointer-events: none;
-            transition: color 1s ease-in-out;
-        }
-
-        @keyframes beat {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.2);
-            }
+        th {
+            font-weight: bold;
         }
     </style>
-    <script>
+        <script>
         // Hide the h1 tag content when the page loads
         window.addEventListener('load', function () {
             var h1Tag = document.querySelector('h1');
@@ -74,72 +43,73 @@
     </script>
 </head>
 <body>
-    <div id="kushi-name" onclick="showHeart()">Kushi</div>
-    <div id="hearts-and-messages"></div>
+    <div class="container">
+        <h1 class="text-center">Diet Plan</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                <th>Days</th>
+                    <th>Early Morning</th>
+                    <th>Morning (Eat a bit heavy as you need more energy for the day)</th>
+                    <th>Afternoon</th>
+                    <th>Night</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 10 rows of diet plan -->
+                <tr>
+                <td>1</td>
+                    <td>Walking, Excersie and Yoga (15 mints each). Have a tulasi green tea</td>
+                    <td>
+                    Ragi dosa, ABC(Apple, Beetroot, Carrot Juice)
+                    </td>
+                    <td>Rice, Dal, Ghee, your fav fry and curd</td>
+                    <td>Keep diet very light and eat lots of fruits (Apple would be great)</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                    <td>Walking, Excersie and Yoga (20 mints each). Have a tulasi green tea</td>
+                    <td>
+                    Idli and wada, Carrot Juice
+                    </td>
+                    <td>Rice, Tomato curry, (Every first Mudha with kaaram and Ghee), your fav fry and curd</td>
+                    <td>Keep diet very light and eat lots of fruits (Apple would be great)</td>
+                </tr>
+                                <tr>
+                <td>3</td>
+                    <td>Walking, Excersie and Yoga (25 mints each). Have a tulasi green tea</td>
+                    <td>
+                   Carrot Dosa, Beetroot Juice
+                    </td>
+                    <td>Rice, Dal, Ghee, your fav fry and curd</td>
+                    <td>Keep diet very light and eat lots of fruits (Apple would be great)</td>
+                </tr>
+                                <tr>
+                <td>4</td>
+                    <td>Walking, Excersie and Yoga (25 mints each). Have a tulasi green tea</td>
+                    <td>
+                    Ragi dosa, ABC(Apple, Beetroot, Carrot Juice)
+                    </td>
+                    <td>Rice, Mixed vegetable curry, Ghee, your fav fry and curd</td>
+                    <td>Keep diet very light and eat lots of fruits (Apple would be great)</td>
+                </tr>
+                
+                                <tr>
+                <td>5</td>
+                    <td>Walking, Excersie and Yoga (30 mints each). Have a tulasi green tea</td>
+                    <td>
+                    Your fav Upma(eeee), ABC(Apple, Beetroot, Carrot Juice)
+                    </td>
+                    <td>Veg Biryani and curd</td>
+                    <td>Keep diet very light and eat lots of fruits (Apple would be great)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-    <script>
-        const messages = [
-            "Take care My SweetHeart",
-            "You have a Million Dollar Smile, Smile Da eeeeeee",
-            "One in a Billion Soul",
-            "Sending all the love for speedy recovery",
-            "You light up my world",
-            "You're my everything",
-            "You are the reason for my happiness",
-            "You make every day better",
-            "I adore you more each day",
-            "My love for you is endless",
-            "You are the queen of my heart",
-            "You complete me",
-            "You are my sunshine",
-            "You are my one and only",
-            "You are my love and my life",
-            "You make life beautiful",
-            "You are the love of my life",
-            "You are the most beautiful person I know",
-            "You are my soulmate",
-            "You are my forever love"
-        ];
-
-        function getRandomElement(arr) {
-            return arr[Math.floor(Math.random() * arr.length)];
-        }
-
-        function getRandomColor() {
-            const letters = '0123456789ABCDEF';
-            let color = '#';
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-
-        function showHeart() {
-            const kushiName = document.getElementById("kushi-name");
-            const heartsAndMessages = document.getElementById("hearts-and-messages");
-            
-            const randomMessage = getRandomElement(messages);
-            const randomHeartColor = getRandomColor();
-            const randomMessageColor = getRandomColor();
-            const randomNameColor = getRandomColor();
-
-            const message = document.createElement("div");
-            message.className = "message";
-            message.textContent = randomMessage;
-            message.style.color = randomMessageColor;
-
-            const heart = document.createElement("div");
-            heart.className = "heart";
-            heart.textContent = "❤️";
-            heart.style.color = randomHeartColor;
-
-            kushiName.style.color = randomNameColor;
-
-            heartsAndMessages.innerHTML = ""; // Clear previous hearts and messages
-
-            heartsAndMessages.appendChild(message);
-            heartsAndMessages.appendChild(heart);
-        }
-    </script>
+    <!-- Include Bootstrap JS and jQuery (for Bootstrap functionality) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
