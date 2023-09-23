@@ -94,7 +94,7 @@
                     <td>Keep diet very light and eat lots of fruits (Apple would be great)</td>
                 </tr>
                 
-                                <tr>
+                            <tr>
                 <td>5</td>
                     <td>Walking, Excersie and Yoga (30 mints each). Have a tulasi green tea</td>
                     <td>
