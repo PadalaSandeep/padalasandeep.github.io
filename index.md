@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6-Month UPSC Plan</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -21,15 +22,7 @@
     </style>
 </head>
 <body>
-<script>
-        // Hide the h1 tag content when the page loads
-        window.addEventListener('load', function () {
-            var h1Tag = document.querySelector('h1');
-            if (h1Tag) {
-                h1Tag.style.display = 'none';
-            }
-        });
-    </script>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
@@ -37,10 +30,10 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#plan">6-Month Plan</a>
@@ -50,9 +43,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#breaks-health">Health & Breaks</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -157,13 +147,6 @@
     </p>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="container text-center my-5">
-    <h2>Contact Us</h2>
-    <p>For any queries, feel free to reach out to us at <strong>upscplanner@example.com</strong></p>
-    <button class="btn btn-primary">Get in Touch</button>
-</section>
-
 <!-- Footer -->
 <footer class="bg-light py-4">
     <div class="container text-center">
@@ -172,4 +155,8 @@
 </footer>
 
 <!-- Bootstrap JS, Popper.js, and Bootstrap Bundle (includes Popper.js) -->
-<script src="https://cdn.jsdelivr
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
