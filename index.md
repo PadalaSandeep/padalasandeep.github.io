@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,6 +19,8 @@
             margin-top: 40px;
         }
     </style>
+</head>
+<body>
 <script>
         // Hide the h1 tag content when the page loads
         window.addEventListener('load', function () {
@@ -29,10 +30,6 @@
             }
         });
     </script>
-
-</head>
-<body>
-
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
