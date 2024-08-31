@@ -20,6 +20,16 @@
             margin-top: 40px;
         }
     </style>
+<script>
+        // Hide the h1 tag content when the page loads
+        window.addEventListener('load', function () {
+            var h1Tag = document.querySelector('h1');
+            if (h1Tag) {
+                h1Tag.style.display = 'none';
+            }
+        });
+    </script>
+
 </head>
 <body>
 
